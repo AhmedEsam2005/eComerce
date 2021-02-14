@@ -1,0 +1,14 @@
+/* Start form Login*/
+.form-login {
+    max-width: 600px;
+    margin:100px  auto;
+    border: 1px solid #CCC;
+    padding: 20px;
+    text-transform: uppercase;
+}
+.form-login h2 {
+    padding: 10px;
+}
+.form-login .btn {
+    text-transform: uppercase;
+}
