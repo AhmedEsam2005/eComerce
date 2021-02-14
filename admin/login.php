@@ -6,7 +6,9 @@
     $username = @$_POST['username'];
     $password = @$_POST['password'];
     $hashed   = sha1($password);
-    $member->loginUser($username, $hashed, $con);
+    $url = isset($_GET['url']) ? $_GET['url'] : 'index.php';
+    $link = $url;
+    $member->loginUser($username, $hashed, $con, $link);
 ?>
 <div class = 'login'>
     <div class="container">

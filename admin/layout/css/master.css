@@ -12,3 +12,26 @@
 .form-login .btn {
     text-transform: uppercase;
 }
+/*STart Member Page*/
+.btn-edit {
+    margin: 20px auto;
+}
+.img {
+    position: relative;
+}
+.edit-image {
+    width: 90px;
+    border-radius: 50%;
+    margin: 15px auto;
+}
+.img i{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translatex(-50%);
+    background: #fd5f26;
+    padding: 5px;
+    color: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+}

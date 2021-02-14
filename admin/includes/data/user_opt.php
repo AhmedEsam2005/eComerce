@@ -8,7 +8,7 @@
         public $fullName;
         public $regStutus;
         public $trustStutus;
-        public function loginUser($username, $hashedPass, $database) {
+        public function loginUser($username, $hashedPass, $database, $url) {
             if (!isset($_SESSION['Username'])) {
                 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                     $stmt = $database->prepare("SELECT * FROM users WHERE Username = ? AND Password = ?");
@@ -18,14 +18,9 @@
                     if ($count === 1 ) {
                         $_SESSION["Username"] = $username;
                         $_SESSION['UserID'] = $row['UserID'];
-                        if (isset($_GET['redirect'])) {
-                            $url = $_GET["redirect"];
-                            header("Location: $url");
-                        }else {
-                            header("Location: index.php");
-                        }
+                        header("Location: $url");
+                        return $count;
                     }
-                    return $count;
                 }
             }else {
                 header("Location: index.php");
