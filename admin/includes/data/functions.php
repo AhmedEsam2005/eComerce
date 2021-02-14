@@ -12,9 +12,9 @@ function redirect( $location) {
  * getInfo v1.0
  * @Added By @Ahmed
  */
-function getInfo($table, $needle, $condition, $database) {
-    $stmt2 = $database->prepare("SELECT $needle FROM $table WHERE $needle = ?");
-    $stmt2->execute(array($condition));
+function getInfo($table, $needle, $condition,$answer, $database) {
+    $stmt2 = $database->prepare("SELECT $needle FROM $table WHERE $condition = ?");
+    $stmt2->execute(array($answer));
     $row = $stmt2->fetch();
     return $row[$needle];
 }

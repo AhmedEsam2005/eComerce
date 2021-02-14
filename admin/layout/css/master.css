@@ -35,3 +35,49 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.pop-box-edit-img {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 50vh;
+    transform: translate(-50%, -50%);
+    border: 1px solid #CCC;
+    z-index: 999999999;
+    display: none;
+}
+.pop-box-edit-img .options {
+    border: 1px solid #ccc;
+}
+.pop-box-edit-img .options p{
+    margin:0;
+    padding: 10px;
+    cursor: pointer;
+}
+.pop-box-edit-img .options p:hover,
+.pop-box-edit-img .options .active {
+    background-color:#BBB;
+    color:#333;
+}
+.pop-box-edit-img form {
+    margin: 30px;
+}
+.pop-box-edit-img .remove {
+    padding: 10px; 
+    background: red;
+    color: #fff;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+.vues .form {
+    display: none;
+}
+.vues .gallery {
+    display: none;
+}
+.vues .active {
+    display: block;
+}
