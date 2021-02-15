@@ -1,3 +1,8 @@
+/*Start Bootstrap Edit*/
+a#navbarDropdown.nav-link.dropdown-toggle::after{
+    display:none;
+}
+/*End Bootstrap Edit*/
 /* Start form Login*/
 .form-login {
     max-width: 600px;
@@ -77,6 +82,9 @@
 }
 .vues .gallery {
     display: none;
+}
+.vues .gallery .img-gallery {
+    width:100px;
 }
 .vues .active {
     display: block;

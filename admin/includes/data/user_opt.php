@@ -27,7 +27,12 @@
                 return true;
             }
         }
-        public function editMember($id) {}
+        public function editMember($id, $db,$username,$fullName, $email, $password) {
+            $stmt2 = $db->prepare("UPDATE users SET Username = ? , FullName = ? , Email = ? ,  Password = ? WHERE UserID = ?");
+            $stmt2->execute(array($username, $fullName, $email, $password, $id));
+            $count = $stmt2->rowCount();
+            return $count;
+        }
     }
 
 ?>

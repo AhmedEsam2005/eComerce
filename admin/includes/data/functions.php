@@ -12,11 +12,17 @@ function redirect( $location) {
  * getInfo v1.0
  * @Added By @Ahmed
  */
-function getInfo($table, $needle, $condition,$answer, $database) {
+function getInfo($table, $needle, $condition,$answer, $database, $option = "one") {
     $stmt2 = $database->prepare("SELECT $needle FROM $table WHERE $condition = ?");
     $stmt2->execute(array($answer));
-    $row = $stmt2->fetch();
-    return $row[$needle];
+    if ($option == 'all') {
+        $rows = $stmt2->fetchAll();
+        return $rows;
+    }else{
+        $row = $stmt2->fetch();
+        return $row[$needle];
+    }
+
 }
 /**
  * Start Function Get Count
