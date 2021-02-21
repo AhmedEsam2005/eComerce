@@ -23,9 +23,9 @@
       <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <?php
-                $image_user =  getInfo('users', 'image', 'UserID', $_SESSION['UserID'], $con) ? "layout/upload/" . getInfo('users', 'image', 'UserID', $_SESSION['UserID'], $con) : "layout/images/defualtAvatar.jpg";
+                $image_user =  getInfo('users', 'image', 'UserID', $_SESSION['UserID'], $con) == 'defualtAvatar.jpg' ? "layout/images/defualtAvatar.jpg" : "layout/upload/" . getInfo('users', 'image', 'UserID', $_SESSION['UserID'], $con);
             ?>
-            <img src= "<?php echo $image_user?>" alt="<?php echo $_SESSION['Username']?>" style= 'width:60px;border-radius:50%;'>
+            <img src= "<?php echo $image_user?>" alt="<?php echo $_SESSION['Username']?>" style= 'width:50px;height:50px;border-radius:50%;'>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="member.php?do=Edit&id=<?php echo $_SESSION['UserID'];?>">Edit Profile</a></li>

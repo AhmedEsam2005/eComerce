@@ -8,7 +8,7 @@
 	include $tpl . "nav.php";
 ?>
 <?php
-	echo "Hello In Index Page";
+	echo "Hello " . $_SESSION['Username'] . " In Index Page";
 ?>
 <?php
 	include $tpl . "footer.php";

@@ -1,6 +1,18 @@
+/*Start rulez*/
+h1 {
+    margin: 20px auto;
+    font-weight: bold;
+}
+/*End rulez*/
 /*Start Bootstrap Edit*/
 a#navbarDropdown.nav-link.dropdown-toggle::after{
     display:none;
+}
+.alert {
+    margin: 20px;
+}
+.btn i {
+    padding: 0 5px;
 }
 /*End Bootstrap Edit*/
 /* Start form Login*/
@@ -17,7 +29,7 @@ a#navbarDropdown.nav-link.dropdown-toggle::after{
 .form-login .btn {
     text-transform: uppercase;
 }
-/*STart Member Page*/
+/*Start Member Page*/
 .btn-edit {
     margin: 20px auto;
 }
@@ -80,6 +92,9 @@ a#navbarDropdown.nav-link.dropdown-toggle::after{
 .vues .form {
     display: none;
 }
+.vues .form input {
+    margin: 30px auto;
+}
 .vues .gallery {
     display: none;
 }
@@ -89,3 +104,14 @@ a#navbarDropdown.nav-link.dropdown-toggle::after{
 .vues .active {
     display: block;
 }
+.main-table tr:first-child td {
+    background-color:#333;
+    color:#fff;
+}
+.avatar {
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+}
+/* End Member Page*/

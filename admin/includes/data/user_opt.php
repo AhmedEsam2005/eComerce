@@ -16,6 +16,8 @@
                     $count =  $stmt->rowCount();
                     $row   = $stmt->fetch();
                     if ($count === 1 ) {
+                        $id = session_create_id("ecom-");
+                        session_id($id);
                         $_SESSION["Username"] = $username;
                         $_SESSION['UserID'] = $row['UserID'];
                         header("Location: $url");
@@ -32,6 +34,12 @@
             $stmt2->execute(array($username, $fullName, $email, $password, $id));
             $count = $stmt2->rowCount();
             return $count;
+        }
+        public function deleteMember($codition,$answer, $table, $db) {
+            $stmt = $db->prepare("DELETE FROM $table WHERE $codition = :zuser");
+            $stmt->bindParam(":zuser", $answer);
+            $stmt->execute();
+            return $stmt->rowCount();
         }
     }
 

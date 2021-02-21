@@ -32,3 +32,6 @@ hiddenAfter5.forEach(e => {
         e.style.display = 'none';
     },5000);
 });
+$(".confirm").click(function () {
+    return confirm("Are You Sure You Want Delete This Member");
+});
